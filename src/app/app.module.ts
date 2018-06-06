@@ -13,19 +13,14 @@ import { Globals } from './services/globals';
 import { SidenavOverviewExampleComponent } from './sidenav-overview-example/sidenav-overview-example.component';
 import { AboutComponent } from './components/about/about.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
-
 import { HttpModule } from '@angular/http';
-
-
 import { ContactComponent } from './components/contact/contact.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 
-
 //services
 import { UserService } from './services/user/user.service';
-
-//modules
+//Home component
 import { HomeComponent } from './components/home/home.component';
 
 //User component
@@ -37,6 +32,7 @@ import { UserDetailsComponent } from './components/user/details/user-details.com
 import { TaskListComponent } from './components/task/list/task-list.component';
 import { TaskAddComponent } from './components/task/add/task-add.component';
 import { TaskDetailsComponent } from './components/task/details/task-details.component';
+//Dashboard component
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { PermissionsComponent } from './components/permissions/permissions.component';
 
@@ -71,7 +67,6 @@ import { PermissionsComponent } from './components/permissions/permissions.compo
     ChartsModule,
     ReactiveFormsModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
-    //ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
     Globals
