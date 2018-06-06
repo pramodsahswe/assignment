@@ -1,0 +1,99 @@
+
+<div class="demo-button">
+  <section class="demo-no-flex">
+    <div>
+      <button mat-button (click)="deleteAllTasks()" *ngIf="checkPermissions['delete']==1?true:false">
+        Delete All
+      </button>
+      <button mat-button (click)="editTask(0)" *ngIf="checkPermissions['write']==1?true:false">
+        Add Task 
+      </button>
+    </div>
+  </section>
+</div>
+
+<div class="mat-elevation-z8" >
+  <mat-form-field class="filter">
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+  </mat-form-field>
+  <table mat-table [dataSource]="dataSource" matSort>
+  <!-- userId Column -->
+     <ng-container matColumnDef="chk">
+        <th mat-header-cell *matHeaderCellDef>
+        <mat-checkbox (change)="$event ? masterToggle() : null"
+        [checked]="selection.hasValue() && isAllSelected()"
+        [indeterminate]="selection.hasValue() && !isAllSelected()">
+        </mat-checkbox>
+        </th>
+        <td mat-cell *matCellDef="let row">
+        <mat-checkbox (click)="$event.stopPropagation()"
+        (change)="$event ? selection.toggle(row) : null"
+        [checked]="selection.isSelected(row)">
+        </mat-checkbox>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Sr. No. </th>
+        <td mat-cell *matCellDef="let element">
+         {{element.id}} </td>
+      </ng-container>
+      <ng-container matColumnDef="userId">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> User Id </th>
+        <td mat-cell *matCellDef="let element"> {{element.userId}} </td>
+      </ng-container>
+      <ng-container matColumnDef="summary">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Task Title </th>
+        <td mat-cell *matCellDef="let element"> {{element.summary}} </td>
+      </ng-container>
+      <ng-container matColumnDef="description">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Description </th>
+        <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+      </ng-container>
+      <ng-container matColumnDef="priorityId">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Priority </th>
+        <td mat-cell *matCellDef="let element"> {{element.priorityId}} </td>
+      </ng-container>
+    <ng-container matColumnDef="statusId">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Status </th>
+      <td mat-cell *matCellDef="let element"> {{element.statusId}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef>
+      Actions
+      </th>
+      <td mat-cell *matCellDef="let row">
+        <button mat-flat-button (click)="deleteTask(row)" [disabled]="checkPermissions['delete']==0?true:false">
+          Delete 
+        </button>&nbsp;
+        <button mat-flat-button (click)="viewTask(row.id)" [disabled]="checkPermissions['view']==0?true:false">
+          View
+        </button>&nbsp;
+        <button mat-flat-button (click)="editTask(row.id)" [disabled]="checkPermissions['edit']==0?true:false">
+          Edit
+        </button>
+      </td>
+    </ng-container>
+
+   
+  <!-- firstName Column -->
+  <!--
+  <ng-container matColumnDef="summary">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header>Summary </th>
+  <td mat-cell *matCellDef="let element"> {{element.summary}} </td>
+  </ng-container>
+   
+  <ng-container matColumnDef="description">
+  <th mat-header-cell *matHeaderCellDef>Description</th>
+  <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+  </ng-container>
+  -->
+  
+   
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+   
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+  </div>

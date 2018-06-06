@@ -1,0 +1,72 @@
+<div class="panel panel-primary">
+  
+        
+  <div class="panel-body">
+      <form class="form-horizontal" novalidate  (ngSubmit)="save()" [formGroup]="userForm">
+          
+              <div class="panel-heading">
+                     
+                  </div>
+              <mat-card>
+                  <h5> Add Task</h5>
+                      <mat-form-field>
+                              <input matInput type="text" placeholder="Task Description" formControlName="taskTitle" [(ngModel)]="task.description" />
+                      </mat-form-field>
+                      <span class="help-block" *ngIf="(userForm.get('taskTitle').touched || 
+                      userForm.get('taskTitle').dirty) && 
+                      userForm.get('taskTitle').errors">
+                          <mat-error *ngIf="userForm.get('taskTitle').errors.required">
+                          Please enter task title.
+                          </mat-error>
+                     </span>
+
+                      <br>
+                      <mat-form-field>
+                              <input matInput type="text" placeholder="Summary" formControlName="taskSummary"  [(ngModel)]="task.summary" />
+                      </mat-form-field>
+                      <span class="help-block" *ngIf="(userForm.get('taskSummary').touched || 
+                      userForm.get('taskSummary').dirty) && 
+                      userForm.get('taskSummary').errors">
+                          <mat-error *ngIf="userForm.get('taskSummary').errors.required">
+                          Please enter summary.
+                          </mat-error>
+                         
+                     </span>
+
+                     <mat-form-field>
+                            <mat-select placeholder="Task Priority" formControlName ="taskpriority"   [(ngModel)]="task.priorityId"  required>
+                              <mat-option>--</mat-option>
+                              <mat-option *ngFor="let pl of prioritylist" [value]="pl.id">
+                                {{pl.priority}}
+                              </mat-option>
+                            </mat-select>
+                            
+                    </mat-form-field>
+                    <mat-form-field>
+                            <mat-select placeholder="Task Status" formControlName="statuslist" [(ngModel)]="task.statusId" required>
+                              <mat-option>--</mat-option>
+                              <mat-option *ngFor="let slist of statuslist" [value]="slist.id">
+                                {{slist.status}}
+                              </mat-option>
+                            </mat-select>
+                            
+                    </mat-form-field>
+
+                      <br>
+                      
+                      <br>
+                      
+                      <button mat-raised-button >Save</button> &nbsp;
+                      <button mat-raised-button  (click)="goBack();">Go Back</button>
+                      <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+              </mat-card>
+      </form>
+  </div>
+</div>
+
+<!--
+<br>Dirty: {{ userForm.dirty }} 
+<br>Touched: {{ userForm.touched }}
+<br>Valid: {{ userForm.valid }}
+<br>Value: {{ userForm.value | json }}
+-->

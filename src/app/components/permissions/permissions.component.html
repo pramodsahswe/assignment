@@ -1,0 +1,26 @@
+<p>
+  Role Permissions
+</p>
+
+<div class="mat-table">
+    <div class="mat-header-row">
+      <div class="mat-header-cell">Role</div>
+      <div class="mat-header-cell">Add</div>
+      <div class="mat-header-cell">Edit</div>
+      <div class="mat-header-cell">Delete</div>
+    </div>
+    <div class="mat-row" *ngFor="let permission of permissions">
+      <div class="mat-cell"> {{permission.role_id==0?'Admin':'User'}}</div>
+      <div class="mat-cell"><mat-checkbox (click)="updatePermission(permission.role_id,$event);" [checked]= "permission.add==0?false:true"></mat-checkbox></div>
+      <div class="mat-cell"><mat-checkbox (click)="updatePermission(permission.role_id,$event);" [checked]= "permission.edit==0?false:true"></mat-checkbox></div>
+      <div class="mat-cell"><mat-checkbox (click)="updatePermission(permission.role_id,$event);" [checked]= "permission.delete==0?false:true"></mat-checkbox></div>
+    </div>
+    <!--
+    <div class="mat-row">
+        <div class="mat-cell">User</div>
+        <div class="mat-cell"><mat-checkbox></mat-checkbox></div>
+        <div class="mat-cell"><mat-checkbox></mat-checkbox></div>
+        <div class="mat-cell"><mat-checkbox></mat-checkbox></div>
+      </div>
+    </div>
+    -->

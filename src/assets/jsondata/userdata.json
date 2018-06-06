@@ -1,0 +1,30 @@
+
+ [
+    {"userId":1,"firstName":"Pramod","lastName":"Sah","email":"admin@gmail.com","address":"Delhi","phoneNo":9015178095,"password":"admin123" ,"roleTypeId":0},
+    {"userId":2,"firstName":"Vinod","lastName":"Kumar","email":"user@gmail.com","address":"Noida","phoneNo":9864427581,"password":"admin123","roleTypeId":1},
+    {"userId":3,"firstName":"Rahul","lastName":"Gupta","email":"Rahul@broctagon.com","address":"Manadawali","phoneNo":9015178095,"password":"admin123","roleTypeId":1},
+    {"userId":4,"firstName":"Afroj","lastName":"Alam","email":"Afroj@broctagon.com","address":"Firojabad","phoneNo":9864427581,"password":"admin123","roleTypeId":1},
+    {"userId":5,"firstName":"Imran","lastName":"Siddiqi","email":"Imran@broctagon.com","address":"Delhi","phoneNo":9864427581,"password":"admin123","roleTypeId":1},
+    {"userId":6,"firstName":"Aman","lastName":"Ratan","email":"Aman@broctagon.com","address":"Noida","phoneNo":9015178095,"password":"admin123","roleTypeId":1},
+    {"userId":7,"firstName":"Rani","lastName":"Kumari","email":"Rani@broctagon.com","address":"Firojabad","phoneNo":9864427581,"password":"admin123","roleTypeId":0},
+    {"userId":8,"firstName":"Divya","lastName":"Datta","email":"Divya@broctagon.com","address":"Noida","phoneNo":9015178095,"password":"admin123","roleTypeId":1},
+    {"userId":9,"firstName":"Aishwarya","lastName":"Rai","email":"Aishwarya@broctagon.com","address":"Firojabad","phoneNo":9864427581,"password":"admin123","roleTypeId":0},
+    {"userId":10,"firstName":"Bipasha","lastName":"Basu","email":"Bipasha@broctagon.com","address":"Noida","phoneNo":9015178095,"password":"admin123","roleTypeId":1},
+    {"userId":11,"firstName":"Sachin","lastName":"Tendulkar","email":"Sachin@broctagon.com","address":"Firojabad","phoneNo":9864427581,"password":"admin123","roleTypeId":0},
+    {"userId":12,"firstName":"Narendra","lastName":"Singh","email":"Narendra@broctagon.com","address":"Noida","phoneNo":9015178095,"password":"admin123","roleTypeId":1},
+    {"userId":13,"firstName":"Nishant","lastName":"Kumar","email":"Nishant@broctagon.com","address":"Firojabad","phoneNo":9864427581,"password":"admin123","roleTypeId":0},
+    {"userId":14,"firstName":"Varun","lastName":"Dhawan","email":"Varun@broctagon.com","address":"Noida","phoneNo":9015178095,"password":"admin123","roleTypeId":1},
+    {"userId":15,"firstName":"Surekha","lastName":"Menon","email":"Surekha@broctagon.com","address":"Firojabad","phoneNo":9864427581,"password":"admin123","roleTypeId":0},
+    {"userId":16,"firstName":"Ankush","lastName":"Kilam","email":"Ankush@broctagon.com","address":"Noida","phoneNo":9015178095,"password":"admin123","roleTypeId":1},
+    {"userId":17,"firstName":"Abhishek","lastName":"Sharma","email":"Abhishek@broctagon.com","address":"Firojabad","phoneNo":9864427581,"password":"admin123","roleTypeId":0},
+    {"userId":18,"firstName":"Om","lastName":"Kashayp","email":"Om@broctagon.com","address":"Noida","phoneNo":9864427581,"password":"admin123","roleTypeId":0},
+    {"userId":19,"firstName":"Amiya","lastName":"Bhatta","email":"Amiya@broctagon.com","address":"Firojabad","phoneNo":9015178095,"password":"admin123","roleTypeId":1},
+    {"userId":20,"firstName":"Vaishali","lastName":"Tank","email":"Vaishali@broctagon.com","address":"Noida","phoneNo":9015178095,"password":"admin123","roleTypeId":1},
+    {"userId":21,"firstName":"Sonam","lastName":"Sahu","email":"Sonam@broctagon.com","address":"Firojabad","phoneNo":9864427581,"password":"admin123","roleTypeId":0},
+    {"userId":22,"firstName":"Divya","lastName":"Rajput","email":"Divya@broctagon.com","address":"Noida","phoneNo":9015178095,"password":"admin123","roleTypeId":1},
+    {"userId":23,"firstName":"Prince","lastName":"Kumar","email":"Prince@broctagon.com","address":"Firojabad","phoneNo":9864427581,"password":"admin123","roleTypeId":1},
+    {"userId":24,"firstName":"Salman","lastName":"Khan","email":"Salman@broctagon.com","address":"Noida","phoneNo":9015178095,"password":"admin123","roleTypeId":1},
+    {"userId":25,"firstName":"Aamir","lastName":"Khan","email":"Aamir@broctagon.com","address":"Firojabad","phoneNo":9864427581,"password":"admin123","roleTypeId":1}
+
+]
+ 

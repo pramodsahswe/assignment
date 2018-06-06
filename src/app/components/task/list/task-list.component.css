@@ -1,0 +1,19 @@
+/* Structure */
+table {
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  .sub-menu {
+    width: auto;
+    float: left;
+}
+
+.filter{
+  width: 20%;
+  
+  margin-left: 80%;
+}

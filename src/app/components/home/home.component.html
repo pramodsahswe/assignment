@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+      <img src="https://broctagon.com/en/wp-content/uploads/2016/12/Broctagon-Fintech-Group-Logoheighnew.png" style="width: 88px;">
+    <span>&nbsp;{{title}}</span>
+    <span class="example-spacer"></span>
+    <button mat-button [routerLink]="['/']">Home </button>
+    <button mat-button [routerLink]="['about']">About </button>
+    <button *ngIf="globals.role===''" mat-button [routerLink]="['register']">Register</button>
+    <button *ngIf="globals.role === 0 " mat-button [routerLink]="['user/list']">Users</button>
+    <button *ngIf="globals.role === 0 " mat-button [routerLink]="['permissions']">Permissions</button>
+    <button *ngIf="globals.role === 0 || globals.role === 1 " mat-button [routerLink]="['task/list']">Tasks</button>
+    <button *ngIf="globals.role===''" mat-button [routerLink]="['login']">Login</button>
+    <button *ngIf="globals.role === 0 || globals.role === 1 " mat-button [routerLink]="['login']" (click)="logout()">Logout</button>
+  </mat-toolbar-row>
+</mat-toolbar>
+<div>
+ <router-outlet></router-outlet>
+</div>
+

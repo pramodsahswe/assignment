@@ -1,0 +1,6 @@
+
+ [
+    {"id":0,"role_id":0,"read":"1","write":"1","edit":"1","delete":"1","view":"1"},
+    {"id":1,"role_id":1,"read":"1","write":"1","edit":"1","delete":"0","view":"1"}
+]
+ 

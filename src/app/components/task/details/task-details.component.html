@@ -1,0 +1,17 @@
+<div class="panel panel-primary">
+        
+  <div class="panel-body">
+              <div class="panel-heading">
+                <mat-list role="list">
+                  <mat-list-item role="listitem"><B>Task ID:</B> {{task.id}}</mat-list-item>
+                  <mat-list-item role="listitem"><B>User ID: </B>{{task.userId}}</mat-list-item>
+                  <mat-list-item role="listitem"><B>Task Summary: </B> {{task.summary}}</mat-list-item>
+                  <mat-list-item role="listitem"><B>Task Priority: </B> {{task.description}} </mat-list-item>
+                  <mat-list-item role="listitem"><B>Task Status: </B>  {{task.priorityId}}</mat-list-item>
+                </mat-list>
+              </div>
+              <button mat-raised-button  (click)="goBack();">
+                Go Back
+              </button>
+  </div>
+</div>

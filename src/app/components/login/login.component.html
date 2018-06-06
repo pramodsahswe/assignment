@@ -1,0 +1,60 @@
+<div class="panel panel-primary">
+        
+  <div class="panel-body">
+      <form class="form-horizontal" novalidate  (ngSubmit)="doLogin()" [formGroup]="userForm">
+          
+              <div class="panel-heading">
+                     
+                  </div>
+              <mat-card>
+                  <h5> Login!</h5>
+                      
+                      <mat-form-field>
+                              <input matInput required type="text" placeholder="Email" formControlName="email" />
+                      </mat-form-field>
+                      <span class="help-block" *ngIf="(userForm.get('email').touched || 
+                          userForm.get('email').dirty) && 
+                          userForm.get('email').errors">
+                          <mat-error *ngIf="userForm.get('email').errors.required">
+                          Please enter your email.
+                          </mat-error>
+                          <!--<mat-error *ngIf="userForm.get('email').errors">
+                          Please enter a valid email.
+                          </mat-error>
+                          -->
+                     </span>
+                      <br>
+                     
+                      <mat-form-field>
+                          <input matInput type="password" required placeholder="Password" formControlName="password" />
+                      </mat-form-field>
+                      <span class="help-block" *ngIf="(userForm.get('password').touched || 
+                      userForm.get('password').dirty) && 
+                      userForm.get('password').errors">
+                      <mat-error *ngIf="userForm.get('password').errors.required">
+                      Please enter your password.
+                      </mat-error>
+                      <!--<mat-error *ngIf="userForm.get('email').errors">
+                      Please enter a valid email.
+                      </mat-error>
+                      -->
+                 </span>
+                      <br>
+                      
+                      
+                      <button mat-raised-button color="primary">Login</button>
+                      &nbsp;
+                      <button mat-raised-button color="primary" disabled>Reset</button>
+
+                      <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+              </mat-card>
+      </form>
+  </div>
+</div>
+
+<!--
+<br>Dirty: {{ userForm.dirty }} 
+<br>Touched: {{ userForm.touched }}
+<br>Valid: {{ userForm.valid }}
+<br>Value: {{ userForm.value | json }}
+-->

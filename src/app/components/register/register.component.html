@@ -1,0 +1,93 @@
+<div class="panel panel-primary">
+    
+          
+    <div class="panel-body">
+        <form class="form-horizontal" novalidate  (ngSubmit)="save()" [formGroup]="userForm">
+            
+                <div class="panel-heading">
+                       
+                    </div>
+                <mat-card>
+                    <h5> Register!</h5>
+                        <mat-form-field>
+                                <input matInput type="text" placeholder="First Name" formControlName="firstName" />
+                        </mat-form-field>
+                        <span class="help-block" *ngIf="(userForm.get('firstName').touched || 
+                        userForm.get('firstName').dirty) && 
+                        userForm.get('firstName').errors">
+                            <mat-error *ngIf="userForm.get('firstName').errors.required">
+                            Please enter your first name.
+                            </mat-error>
+                            <mat-error *ngIf="userForm.get('firstName').errors.minlength">
+                            The first name must  be longer than 5 characters.
+                            </mat-error>
+                       </span>
+
+                        <br>
+                        <mat-form-field>
+                                <input matInput type="text" placeholder="Last Name" formControlName="lastName" />
+                        </mat-form-field>
+                        <span class="help-block" *ngIf="(userForm.get('lastName').touched || 
+                        userForm.get('lastName').dirty) && 
+                        userForm.get('lastName').errors">
+                            <mat-error *ngIf="userForm.get('lastName').errors.required">
+                            Please enter your last name.
+                            </mat-error>
+                            <mat-error *ngIf="userForm.get('lastName').errors.minlength">
+                            The last name must be longer than 5 characters.
+                            </mat-error>
+                       </span>
+
+                        <br>
+                        <mat-form-field>
+                                <input matInput type="text" placeholder="Email" formControlName="email" />
+                        </mat-form-field>
+                        <span class="help-block" *ngIf="(userForm.get('email').touched || 
+                            userForm.get('email').dirty) && 
+                            userForm.get('email').errors">
+                            <mat-error *ngIf="userForm.get('email').errors.required">
+                            Please enter your email.
+                            </mat-error>
+                            <mat-error *ngIf="userForm.get('email').errors">
+                            Please enter a valid email.
+                            </mat-error>
+                       </span>
+                        <br>
+                        <mat-form-field>
+                                <input matInput type="text" placeholder="City" formControlName="city" />
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field>
+                                <input matInput type="text" placeholder="Address" formControlName="address" />
+                        </mat-form-field>
+                        <span class="help-block" *ngIf="(userForm.get('address').touched || 
+                                                         userForm.get('address').dirty) && 
+                                                         userForm.get('address').errors">
+                        <mat-error *ngIf="userForm.get('address').errors.required">
+                        Please enter your address.
+                        </mat-error>
+                        </span>
+                        <mat-form-field>
+                            <input matInput type="text" placeholder="Phone" formControlName="phone" />
+                        </mat-form-field>
+                        <mat-form-field>
+                            <input matInput type="text" placeholder="Password" formControlName="password" />
+                        </mat-form-field>
+                        <mat-form-field>
+                            <input matInput type="text" placeholder="Confirm Password" formControlName="confirmPassword" />
+                       </mat-form-field>
+                        <br>
+                        
+                        <button mat-raised-button >Register</button>
+                        <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+                </mat-card>
+        </form>
+    </div>
+</div>
+
+<!--
+<br>Dirty: {{ userForm.dirty }} 
+<br>Touched: {{ userForm.touched }}
+<br>Valid: {{ userForm.valid }}
+<br>Value: {{ userForm.value | json }}
+-->

@@ -1,0 +1,32 @@
+<div style="display: block" *ngIf="globals.role === 0 ">
+ 
+      <h4>Tasks (Pie Chart) </h4>
+
+      <div style="display: block; width: 80%; height: 85%;">
+          <canvas
+          baseChart
+          [chartType]="'pie'"
+          [datasets]="pieChartData"
+          [labels]="pieChartLabels"
+          [options]="pieChartOptions"
+          [legend]="true"
+          [colors]="pieChartColor"
+          (chartClick)="onChartClick($event)">
+          </canvas>
+          </div>
+
+  
+  <h4>Tasks (Doughnut Chart) </h4>
+  <div style="display: block; width: 70%; height: 70%;">
+  <canvas baseChart
+              [data]="doughnutChartData"
+              [labels]="doughnutChartLabels"
+              [chartType]="doughnutChartType"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)">
+ </canvas>
+</div>
+</div>
+
+
+<mat-card class="dashboard" *ngIf="globals.role === ''"> <h4>Login to your account to access your dashboard.</h4></mat-card>
