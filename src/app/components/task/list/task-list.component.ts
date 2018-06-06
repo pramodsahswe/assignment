@@ -33,7 +33,7 @@ export class TaskListComponent implements OnInit {
       this._task.getTaskList().subscribe(data=>
       {
         // If user is admin display all data else display logged in user data for other role
-        if(this.globals.role === '1') {
+        if(this.globals.role == '0') {
           this.resData =  data;
         } else {
           let userID = this.getUserId();
