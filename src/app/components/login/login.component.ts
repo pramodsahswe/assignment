@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
         })
     }
 
-    // Initicate login
+  // Initiate login
 	doLogin(){
         if (this.userForm.invalid === true)
          return;
@@ -51,6 +51,8 @@ export class LoginComponent implements OnInit {
                     } else {
                         this.success(userDetails);
                     }
+                }else {
+                    this.success(userDetails);
                 }
             });
     }
